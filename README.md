@@ -1,5 +1,5 @@
-Shutterfly Code Challenge
-=========================
+Shutterfly Coding Challenge
+===========================
 
 ## [Problem Description](https://github.com/harikamireddi/Shutterfly_challenge/blob/master/PROBLEM_DESCRIPTION.md)
 
@@ -26,14 +26,14 @@ Installation Instructions
   * Run program
     * `(shutterfly_challenge) $ python app.py`
 
-External Libraries
-------------------
+Libraries installed
+--------------------
 
 * [dateparser](https://pypi.python.org/pypi/dateparser) is used to parse the event_time.
 
 
-How To Read The Code
---------------------
+Reading The Code
+----------------
 
 * Start with [src/shutterfly_code_challenge/app.py](https://github.com/harikamireddi/Shutterfly_challenge/blob/master/src/shutterfly_code_challenge/app.py).
 
@@ -42,8 +42,8 @@ How To Read The Code
 * Then look into [src/shutterfly_code_challenge/main/main.py](https://github.com/harikamireddi/Shutterfly_challenge/blob/master/src/shutterfly_code_challenge/main/main.py) to see how Ingest(e, D) and TopXSimpleLTVCustomers(x, D) are implemented.
 
 
-Design Decisions
-----------------
+Design 
+------
 
 ### Events
 
@@ -65,17 +65,12 @@ Design Decisions
 * A new attribute called created_time is created for each record.
   * This is the event_time on the NEW or UPLOAD event.
 
-Assumptions
------------
+Assumptions and Considerations
+------------------------------
 
 * All Order.total_amount values are in USD
 
-* x in TopXSimpleLTVCustomerEvents(x, D) will be small.
-
-Considerations
---------------
-
-### TopXSimpleLTVCustomerEvents(x, D)
+* x in TopXSimpleLTVCustomerEvents(x, D) will be small
 
 * If an Order event UPDATE comes in for a key, but the NEW event has not come in
   yet, that key is ignored for this calculation.
