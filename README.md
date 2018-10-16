@@ -1,7 +1,7 @@
 Shutterfly Code Challenge
 =========================
 
-## [Problem Description](https://github.com/jarrellmark/shutterfly_code_challenge/blob/master/PROBLEM_DESCRIPTION.md)
+## [Problem Description](https://github.com/harikamireddi/Shutterfly_challenge/blob/master/PROBLEM_DESCRIPTION.md)
 
 Installation Instructions
 -------------------------
@@ -18,10 +18,10 @@ Installation Instructions
 * Inside the environment
 
   * Navigate to source directory
-    * `(shutterfly_code_challenge) $ cd src/shutterfly_challenge`
+    * `(shutterfly_challenge) $ cd src/shutterfly_challenge`
 
   * Install dependencies
-    * `(shutterfly_code_challenge) $ pip install -r requirements.txt`
+    * `(shutterfly_challenge) $ pip install -r requirements.txt`
 
   * Run program
     * `(shutterfly_challenge) $ python app.py`
@@ -86,5 +86,5 @@ Considerations
 
 Performance characteristic
 --------------------------
-*Keeping Performance in mind I have tried to use dictionary for the in-memory Data Structure instead of lists,
+*Keeping Performance in mind tried to use dictionary for the in-memory Data Structure instead of lists,
  wherever frequent searching is required, so that we can reduce the lookup time to O(1).
