@@ -8,23 +8,23 @@ Installation Instructions
 
 * Create and activate a python 3 environment
   * Using conda, that would be
-    * `$ conda create --name shutterfly_code_challenge python=3`
-    * `$ source activate shutterfly_code_challenge`
+    * `$ conda create --name shutterfly_challenge python=3`
+    * `$ source activate shutterfly_challenge`
   * Virtualenv can also be used
-    * `$ cd src/shutterfly_code_challenge`
+    * `$ cd src/shutterfly_challenge`
     * `$ virtualenv -p python3 .venv`
     * `$ source .venv/bin/activate`
 
 * Inside the environment
 
   * Navigate to source directory
-    * `(shutterfly_code_challenge) $ cd src/shutterfly_code_challenge`
+    * `(shutterfly_code_challenge) $ cd src/shutterfly_challenge`
 
   * Install dependencies
     * `(shutterfly_code_challenge) $ pip install -r requirements.txt`
 
   * Run program
-    * `(shutterfly_code_challenge) $ python app.py`
+    * `(shutterfly_challenge) $ python app.py`
 
 External Libraries
 ------------------
@@ -35,11 +35,11 @@ External Libraries
 How To Read The Code
 --------------------
 
-* Start with [src/shutterfly_code_challenge/app.py](https://github.com/jarrellmark/shutterfly_code_challenge/blob/master/src/shutterfly_code_challenge/app.py).
+* Start with [src/shutterfly_code_challenge/app.py](https://github.com/harikamireddi/Shutterfly_challenge/blob/master/src/shutterfly_code_challenge/app.py).
 
-* Then look into [src/shutterfly_code_challenge/events](https://github.com/jarrellmark/shutterfly_code_challenge/tree/master/src/shutterfly_code_challenge/events) (start with base_event.py) and [src/shutterfly_code_challenge/lib](https://github.com/jarrellmark/shutterfly_code_challenge/tree/master/src/shutterfly_code_challenge/lib) to see how events are implemented.
+* Then look into [src/shutterfly_code_challenge/events](https://github.com/harikamireddi/Shutterfly_challenge/tree/master/src/shutterfly_code_challenge/events) (start with base_event.py) and [src/shutterfly_code_challenge/lib](https://github.com/harikamireddi/Shutterfly_challenge/tree/master/src/shutterfly_code_challenge/lib) to see how events are implemented.
 
-* Then look into [src/shutterfly_code_challenge/main/main.py](https://github.com/jarrellmark/shutterfly_code_challenge/blob/master/src/shutterfly_code_challenge/main/main.py) to see how Ingest(e, D) and TopXSimpleLTVCustomers(x, D) are implemented.
+* Then look into [src/shutterfly_code_challenge/main/main.py](https://github.com/harikamireddi/Shutterfly_challenge/blob/master/src/shutterfly_code_challenge/main/main.py) to see how Ingest(e, D) and TopXSimpleLTVCustomers(x, D) are implemented.
 
 
 Design Decisions
@@ -83,3 +83,8 @@ Considerations
     created when the NEW method comes in.
   * This could be addressed by setting Order.created_time to the event_time of
     the UPDATE if Order.created_time is empty.
+
+Performance characteristic
+--------------------------
+*Keeping Performance in mind I have tried to use dictionary for the in-memory Data Structure instead of lists,
+ wherever frequent searching is required, so that we can reduce the lookup time to O(1).
